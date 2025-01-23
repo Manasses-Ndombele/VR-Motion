@@ -1,5 +1,6 @@
 import PromotionMini from '../components/PromotionMini';
 import Header from '../components/Header';
+import Cart from '../components/Cart';
 import BrandIntro from '../components/BrandIntro';
 import Shopping from '../components/Shopping';
 import MainBtn from '../components/MainBtn';
@@ -10,6 +11,7 @@ export default function Gamer() {
         <>
             <PromotionMini />
             <Header />
+            <Cart />
             <main>
                 <BrandIntro title="Óculos VR Gamers" />
                 <Shopping titleDisplay={false} />

@@ -1,5 +1,6 @@
 import PromotionMini from '../components/PromotionMini';
 import Header from '../components/Header';
+import Cart from '../components/Cart';
 import BrandIntro from '../components/BrandIntro';
 import CategoriesContainer from '../components/CategoriesContainer';
 import Shopping from '../components/Shopping';
@@ -12,6 +13,7 @@ export default function Home() {
         <>
             <PromotionMini />
             <Header />
+            <Cart />
             <main>
                 <BrandIntro title="VR Motion" slogan="Vendo o mundo a tua maneira!" />
                 <CategoriesContainer />
