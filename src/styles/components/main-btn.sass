@@ -1,0 +1,13 @@
+@use '../base'
+
+.main-btn
+    background-color: base.$tertiary-color
+    color: base.$primary-color
+    width: 40%
+    transition: all .4s ease-in
+
+    &:active,
+    &:hover
+        background-color: base.$primary-color
+        color: base.$tertiary-color
+        border: 1px solid base.$tertiary-color !important

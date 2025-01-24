@@ -6,12 +6,13 @@ import { useParams } from 'react-router';
 
 export default function ProductPage() {
     const { productId } = useParams()
+    console.log(productId)
 
     return (
         <>
             <PromotionMini />
-            <Header />
-            <MainProduct productId={productId} />
+            <Header activeLink={null} />
+            <MainProduct productId={12} img="/HTC Vive.webp" name="HTC Vive" price="AOA 180.000,00" maxStock="20" />
             <Footer />
         </>
     )

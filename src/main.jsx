@@ -4,6 +4,7 @@ import Home from './routes/Home';
 import Gamer from './routes/Gamer';
 import News from './routes/News';
 import ProductPage from './routes/ProductPage';
+import './styles/base.sass';
 
 createRoot(document.getElementById('root')).render(
   <Router>

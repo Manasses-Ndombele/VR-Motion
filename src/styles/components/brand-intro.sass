@@ -1,0 +1,42 @@
+@use '../base'
+
+@keyframes fadeInTxt
+    to
+        opacity: 1
+
+@keyframes fadeInBg
+    from
+        opacity: 0
+        transform: scaleX(0)
+
+    to
+        opacity: 1
+        transform: scaleX(1)
+
+.brand-intro
+    &.bg-active
+        background-image: linear-gradient(to top, base.$primary-color, transparent, transparent)
+
+    h1
+        font-size: 2.5em
+        color: base.$tertiary-color
+        line-height: 35px
+
+    p
+        width: 16rem
+        white-space: nowrap
+        opacity: 0
+        animation: fadeInTxt 1s ease-in forwards
+
+        &::before
+            content: ''
+            display: block
+            background-color: base.$primary-color
+            width: 100%
+            height: 100%
+            z-index: -1
+            position: absolute
+            top: 0
+            left: 0
+            transform-origin: left
+            animation: fadeInBg 1.5s ease-in forwards

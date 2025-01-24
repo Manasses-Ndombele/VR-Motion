@@ -1,0 +1,48 @@
+@use '../base'
+
+.ads-area
+    .ads-container
+        .ads-description
+            background-image: linear-gradient(to top, base.$primary-color 60%, transparent)
+
+            .invisible
+                opacity: 0
+                transform: translateY(-1rem)
+
+            .visible
+                opacity: 1
+                transform: translateY(0rem)
+
+            svg
+                font-size: 3em
+                color: base.$tertiary-color
+                transition: all .5s ease-in-out
+
+            h2
+                transition: all .5s ease-in-out
+                @include base.open-sans-font()
+
+                span
+                    @include base.archivo-black-font()
+                    font-size: 2em
+
+            p
+                transition: all .5s ease-in-out
+
+    .coupon-description
+        p
+            @include base.archivo-black-font()
+            font-size: 1.5em
+
+        svg
+            font-size: 2em
+            transform: rotate(90deg)
+            transition: all .5s cubic-bezier(0.410, 1.135, 0.750, 0.025)
+
+            &.invisible
+                opacity: 0
+                transform: translateY(-1rem)
+
+            &.visible
+                opacity: 1
+                transform: translateY(0rem) rotate(90deg)

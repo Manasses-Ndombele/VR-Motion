@@ -1,0 +1,20 @@
+@use '../base'
+
+.categories-area
+    .categories-containers
+        grid-template-columns: 100% 100% 100%
+        transition: transform .5s cubic-bezier(0.350, 0.170, 0.520, 0.970)
+
+        .item
+            a
+                .category-container
+                    img
+                        height: 18rem
+
+                    .title-container
+                        z-index: 2
+                        background-image: linear-gradient(to top, base.$primary-color, transparent, transparent)
+
+                        p
+                            font-size: 1.5em
+                            color: base.$tertiary-color

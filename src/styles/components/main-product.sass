@@ -1,0 +1,25 @@
+@use '../base'
+
+main
+    .product-info-container
+        h1
+            @include base.open-sans-font()
+            font-weight: bold
+
+        p
+            &.price-text
+                font-size: 1.1em
+
+            span
+                font-size: 1.2em
+
+        .form-label
+            font-size: 1.1em
+
+        .form-control
+            border: 1px solid base.$tertiary-color
+
+            &:hover,
+            &:focus
+                box-shadow: none
+                border: 1px solid base.$tertiary-color

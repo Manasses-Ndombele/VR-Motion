@@ -13,3 +13,14 @@ $tertiary-color: #000000
     font-weight: 400
     font-style: normal
     font-variation-settings: "wdth" 100
+
+body
+    margin: 0
+    background-color: $secondary-color
+    @include open-sans-font()
+
+    &.menu-activated
+        overflow-y: hidden
+
+    &.menu-deactivated
+        overflow-y: scroll

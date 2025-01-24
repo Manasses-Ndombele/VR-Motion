@@ -1,0 +1,34 @@
+@use '../base'
+
+footer
+    .brand-area
+        background-color: base.$tertiary-color
+        color: base.$secondary-color
+
+        h2
+            color: base.$secondary-color
+            font-size: 1.5em
+
+    .container-info
+        nav
+            a
+                color: base.$tertiary-color
+
+                &:hover,
+                &:active
+                    text-decoration: underline !important
+
+    .social-container
+        border-top: 1px solid base.$tertiary-color
+        border-bottom: 1px solid base.$tertiary-color
+
+        a
+            color: base.$tertiary-color
+
+            svg
+                font-size: 1.3em
+
+    .copyright-container
+        border-bottom: 1px solid base.$tertiary-color
+        background-color: base.$primary-color
+        color: base.$tertiary-color

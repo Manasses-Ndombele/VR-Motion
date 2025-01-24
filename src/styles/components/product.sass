@@ -1,0 +1,26 @@
+@use '../base'
+
+.product-card
+    height: 20rem
+    color: base.$tertiary-color
+    border: 1px solid base.$tertiary-color
+    transition: all 1s ease-in
+
+    &:hover
+        text-decoration: underline !important
+
+    &.invisible
+        filter: blur(2px)
+        opacity: .5
+
+    .best-seller
+        background-color: base.$tertiary-color
+        color: base.$primary-color
+
+    img
+        height: 200px
+        border-bottom: 1px solid base.$tertiary-color
+
+    .product-name
+        font-size: 1.4em
+        word-spacing: 3px

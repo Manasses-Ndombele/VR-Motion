@@ -1,0 +1,103 @@
+@use '../base'
+
+header
+    .navbrand-options-container
+        background-color: base.$primary-color
+
+        a
+            color: base.$tertiary-color
+            font-size: 1.5em
+            font-weight: bold
+
+        .options
+            button
+                &:first-child
+                    svg
+                        font-size: 2em
+
+                    span
+                        color: base.$primary-color
+                        font-size: .8em
+                        top: .7rem
+                        right: 1.1rem
+
+                &:nth-child(2)
+                    border: 1px solid base.$tertiary-color
+                    width: 50px
+                    height: 50px
+
+                    svg
+                        font-size: 1.5em
+
+    menu
+        background-color: base.$secondary-color
+        z-index: 1
+        transition: all .5s ease-in-out
+
+        &.deactivated
+            transform: translateY(-100vh)
+            opacity: 0
+            visibility: hidden
+
+        &.activated
+            transform: none
+            opacity: 1
+            visibility: visible
+
+        .options
+            height: 5rem
+
+            a
+                @include base.open-sans-font()
+
+                button
+                    font-size: 1.2em
+
+                svg
+                    font-size: 1.5em
+
+            button
+                &:nth-child(2)
+                    background-color: base.$tertiary-color
+                    color: base.$primary-color
+                    width: 50px
+                    height: 50px
+                    font-size: 1.4em
+
+        .main-nav
+            a
+                color: base.$tertiary-color
+                @include base.open-sans-font()
+                font-size: 1.5em
+                letter-spacing: 2px
+
+                &.active
+                    font-weight: bold
+
+.cart-container
+    background-color: base.$secondary-color
+    z-index: 1
+    transition: all .5s ease-in-out
+
+    &.deactivated
+        transform: translateY(-100vh)
+        opacity: 0
+        visibility: hidden
+
+    &.activated
+        transform: none
+        opacity: 1
+        visibility: visible
+
+    .cart-header
+        border-bottom: 1.5px solid base.$tertiary-color
+
+        p
+            color: base.$tertiary-color
+            font-size: 1.5em
+            @include base.archivo-black-font()
+
+    .cart-products
+        .empty-cart
+            p
+                font-size: 1.3em
