@@ -16,6 +16,8 @@
 .brand-intro
     &.bg-active
         background-image: linear-gradient(to top, base.$primary-color, transparent, transparent)
+        @include base.tablet()
+            margin-bottom: 2rem
 
     h1
         font-size: 2.5em
@@ -27,6 +29,8 @@
         white-space: nowrap
         opacity: 0
         animation: fadeInTxt 1s ease-in forwards
+        @include base.laptop()
+            width: 20rem
 
         &::before
             content: ''

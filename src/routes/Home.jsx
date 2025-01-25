@@ -12,7 +12,7 @@ export default function Home() {
         <>
             <PromotionMini />
             <Header activeLink={0} />
-            <main>
+            <main className="w-100">
                 <BrandIntro title="VR Motion" slogan="Veja o mundo a tua maneira!" />
                 <CategoriesContainer />
                 <Shopping titleDisplay={true} />

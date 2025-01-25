@@ -1,7 +1,52 @@
 @use '../base'
 
 main
+    @include base.tablet()
+        padding: 0 !important
+        margin: 0 auto
+        width: 90%
+
+    @include base.laptop()
+        width: 100%
+        display: flex
+        gap: 1rem
+        align-items: center
+
+    @include base.desktop()
+        width: 80%
+
+    @include base.Tv()
+        width: 70%
+
+    .product-img-container
+        @include base.tablet()
+            display: flex
+            justify-content: center
+
+        @include base.laptop()
+            width: 100%
+
+        @include base.desktop()
+            width: 90%
+
+        @include base.Tv()
+            width: 70%
+
+        img
+            @include base.tablet()
+                width: 50% !important
+
+            @include base.laptop()
+                width: 100% !important
+                height: min-content
+
     .product-info-container
+        @include base.desktop()
+            width: 90%
+
+        @include base.Tv()
+            width: 70%
+
         h1
             @include base.open-sans-font()
             font-weight: bold
@@ -18,8 +63,21 @@ main
 
         .form-control
             border: 1px solid base.$tertiary-color
+            @include base.tablet()
+                width: 40%
+
+            @include base.laptop()
+                width: 60%
+                cursor: pointer
 
             &:hover,
             &:focus
                 box-shadow: none
                 border: 1px solid base.$tertiary-color
+
+        button.main-btn
+            @include base.tablet()
+                width: 40% !important
+
+            @include base.laptop()
+                width: 60% !important

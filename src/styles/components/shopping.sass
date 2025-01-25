@@ -1,7 +1,28 @@
 @use '../base'
 
-h2
-    @include base.open-sans-font
-    font-weight: bold
-    color: base.$tertiary-color
-    font-size: 1.8em
+.shopping-area
+    @include base.tablet()
+        padding: 0 !important
+
+    h2
+        @include base.open-sans-font
+        font-weight: bold
+        color: base.$tertiary-color
+        font-size: 1.8em
+
+    .products-container
+        @include base.tablet()
+            display: grid !important
+            grid-template-columns: 45% 45%
+            gap: 1rem !important
+            justify-content: center
+
+        @include base.laptop()
+            grid-template-columns: 30% 30% 30%
+
+        @include base.desktop()
+            margin: 0 auto
+            width: 90%
+
+        @include base.Tv()
+            width: 80%

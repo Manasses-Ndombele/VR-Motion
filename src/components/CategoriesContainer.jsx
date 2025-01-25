@@ -12,9 +12,11 @@ export default function CategoriesContainer() {
         }
 
         function updateCarousel() {
-            const carouselContainer = document.querySelector('div.categories-containers')
-            const offset = -currentIndex * 100
-            carouselContainer.style.transform = `translateX(${offset}%)`
+            if (window.innerWidth < 769) {
+                const carouselContainer = document.querySelector('div.categories-containers')
+                const offset = -currentIndex * 100
+                carouselContainer.style.transform = `translateX(${offset}%)`
+            }
         }
 
         setInterval(showNextItem, 3000)

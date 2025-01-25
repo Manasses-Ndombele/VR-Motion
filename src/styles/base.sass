@@ -1,6 +1,7 @@
 $primary-color: #D6FF38
 $secondary-color: #FFFFFF
 $tertiary-color: #000000
+$tertiary-color-b: #00000098
 
 @mixin archivo-black-font()
     font-family: "Archivo Black", serif
@@ -14,10 +15,28 @@ $tertiary-color: #000000
     font-style: normal
     font-variation-settings: "wdth" 100
 
+@mixin tablet()
+    @media screen and (min-width: 481px)
+        @content
+
+@mixin laptop()
+    @media screen and (min-width: 769px)
+        @content
+
+@mixin desktop()
+    @media screen and (min-width: 1025px)
+        @content
+
+@mixin Tv()
+    @media screen and (min-width: 1201px)
+        @content
+
 body
     margin: 0
     background-color: $secondary-color
     @include open-sans-font()
+    @include laptop()
+        overflow-x: hidden
 
     &.menu-activated
         overflow-y: hidden

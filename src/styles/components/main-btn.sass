@@ -5,6 +5,11 @@
     color: base.$primary-color
     width: 40%
     transition: all .4s ease-in
+    @include base.laptop()
+        width: 30%
+
+    @include base.Tv()
+        width: 20%
 
     &:active,
     &:hover

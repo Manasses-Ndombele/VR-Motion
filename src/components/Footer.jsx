@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer>
             <div className="brand-area p-3">
-                <h2 className="text-uppercase">VR Motion</h2>
+                <h2 className="text-uppercase fw-bold">VR Motion</h2>
                 <p className="mb-0">info@vrmotion.com</p>
                 <p className="mb-0">Tel: (+244) 923 224 456</p>
             </div>

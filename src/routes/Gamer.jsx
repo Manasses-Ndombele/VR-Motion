@@ -10,7 +10,7 @@ export default function Gamer() {
         <>
             <PromotionMini />
             <Header activeLink={1} />
-            <main>
+            <main className="w-100">
                 <BrandIntro title="Óculos VR Gamers" bgActive={true} slogan={false} />
                 <Shopping titleDisplay={false} />
                 <div className="more-options w-100 d-flex justify-content-center my-3">

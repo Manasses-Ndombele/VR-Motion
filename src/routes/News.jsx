@@ -10,7 +10,7 @@ export default function News() {
         <>
             <PromotionMini />
             <Header activeLink={2} />
-            <main>
+            <main className="w-100">
                 <BrandIntro title="Novidades" bgActive={true} slogan={false} />
                 <Shopping titleDisplay={false} />
                 <div className="more-options w-100 d-flex justify-content-center my-3">

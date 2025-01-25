@@ -1,6 +1,11 @@
 @use '../base'
 
 footer
+    @include base.laptop()
+        display: grid
+        grid-template-columns: 30% 70%
+        grid-template-rows: 80% 20%
+
     .brand-area
         background-color: base.$tertiary-color
         color: base.$secondary-color
@@ -10,6 +15,15 @@ footer
             font-size: 1.5em
 
     .container-info
+        @include base.tablet()
+            flex-direction: row !important
+            justify-content: space-between
+
+        @include base.laptop()
+            justify-content: space-around
+            border-top: 1px solid base.$tertiary-color
+            border-right: 1px solid base.$tertiary-color
+
         nav
             a
                 color: base.$tertiary-color
@@ -32,3 +46,6 @@ footer
         border-bottom: 1px solid base.$tertiary-color
         background-color: base.$primary-color
         color: base.$tertiary-color
+        @include base.laptop()
+            text-align: left !important
+            border: 1px solid base.$tertiary-color

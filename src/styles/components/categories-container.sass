@@ -1,19 +1,39 @@
 @use '../base'
 
 .categories-area
+    @include base.tablet()
+        background-image: linear-gradient(45deg, base.$primary-color, transparent, base.$primary-color)
+
     .categories-containers
         grid-template-columns: 100% 100% 100%
         transition: transform .5s cubic-bezier(0.350, 0.170, 0.520, 0.970)
+        @include base.tablet()
+            width: 70%
+            margin: 0 auto
+
+        @include base.laptop()
+            margin: 0
+            width: 100%
+            grid-template-columns: 25% 50% 25%
 
         .item
             a
                 .category-container
                     img
                         height: 18rem
+                        @include base.laptop()
+                            height: 22rem
+                            object-fit: cover
 
                     .title-container
                         z-index: 2
                         background-image: linear-gradient(to top, base.$primary-color, transparent, transparent)
+                        @include base.laptop()
+                            transition: opacity .4s ease-in-out
+                            opacity: 0
+
+                            &:hover
+                                opacity: 1
 
                         p
                             font-size: 1.5em

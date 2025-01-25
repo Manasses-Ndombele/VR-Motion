@@ -2,8 +2,18 @@
 
 .ads-area
     .ads-container
+        @include base.laptop()
+            display: flex
+
         .ads-description
             background-image: linear-gradient(to top, base.$primary-color 60%, transparent)
+            @include base.tablet()
+                padding: 0 1rem
+
+            @include base.laptop()
+                justify-content: center
+                background-image: linear-gradient(to top, base.$primary-color 40%, transparent)
+                width: 60vw
 
             .invisible
                 opacity: 0
@@ -20,6 +30,7 @@
 
             h2
                 transition: all .5s ease-in-out
+                color: base.$tertiary-color
                 @include base.open-sans-font()
 
                 span
@@ -27,9 +38,26 @@
                     font-size: 2em
 
             p
+                color: base.$tertiary-color
                 transition: all .5s ease-in-out
 
+        .ads-image
+            img
+                @include base.tablet()
+                    height: 30rem
+                    object-fit: cover
+
+                @include base.laptop()
+                    object-fit: none
+                    height: 100vh
+                    width: 40vw !important
+
     .coupon-description
+        @include base.laptop()
+            display: flex
+            align-items: center
+            justify-content: center
+
         p
             @include base.archivo-black-font()
             font-size: 1.5em
@@ -38,6 +66,9 @@
             font-size: 2em
             transform: rotate(90deg)
             transition: all .5s cubic-bezier(0.410, 1.135, 0.750, 0.025)
+            @include base.laptop()
+                transform: none !important
+                margin: 0 .4rem
 
             &.invisible
                 opacity: 0

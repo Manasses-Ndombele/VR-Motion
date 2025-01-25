@@ -3,15 +3,143 @@
 header
     .navbrand-options-container
         background-color: base.$primary-color
+        @include base.laptop()
+            background-color: base.$secondary-color
+            border-bottom: 1px solid base.$tertiary-color
+            padding: 0 !important
+            justify-content: start !important
+            display: grid !important
+            grid-template-columns: 25% 50% 25%
+            justify-content: space-between !important
 
-        a
+        .brand
             color: base.$tertiary-color
             font-size: 1.5em
             font-weight: bold
+            white-space: nowrap
+            @include base.laptop()
+                height: 100%
+                padding: 1.5rem 1rem
+                border-right: 1px solid base.$tertiary-color
+                background-color: base.$primary-color
+                width: 90%
+
+        menu#main-menu
+            background-color: base.$secondary-color
+            z-index: 1
+            transition: all .5s ease-in-out
+            @include base.laptop()
+                width: 100% !important
+                height: 100% !important
+                position: static !important
+                transform: none !important
+                opacity: 1 !important
+                visibility: visible !important
+                z-index: auto
+                background-color: transparent
+                display: flex
+                flex-direction: row-reverse
+                align-items: center
+
+            &.deactivated
+                transform: translateY(-100vh)
+                opacity: 0
+                visibility: hidden
+
+            &.activated
+                transform: none
+                opacity: 1
+                visibility: visible
+
+            .options
+                height: 5rem
+                @include base.laptop()
+                    padding: 0 !important
+                    width: min-content
+                    display: block !important
+                    height: min-content
+
+                a
+                    @include base.open-sans-font()
+                    @include base.laptop()
+                        &#login-btn-sm
+                            display: none !important
+
+                    button
+                        font-size: 1.2em
+
+                        svg
+                            font-size: 1.5em
+
+                button
+                    &#close-menu-btn
+                        background-color: base.$tertiary-color
+                        color: base.$primary-color
+                        width: 50px
+                        height: 50px
+                        font-size: 1.4em
+                        @include base.laptop()
+                            display: none
+
+            .main-nav
+                @include base.laptop()
+                    margin: 0 !important
+                    padding: 0 1rem !important
+                    flex-direction: row !important
+                    justify-content: center
+                    align-items: center !important
+                    width: 100%
+
+                a
+                    color: base.$tertiary-color
+                    @include base.open-sans-font()
+                    font-size: 1.5em
+                    letter-spacing: 2px
+                    @include base.laptop()
+                        display: block
+                        font-size: 1.1em
+                        height: 100%
+                        width: 100%
+
+                        &:not(:last-child)
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+
+                            &::after
+                                content: ''
+                                display: block
+                                width: 1px
+                                height: 4rem
+                                background-color: base.$tertiary-color
+
+                    &.active,
+                    &:hover
+                        font-weight: bold
 
         .options
+            @include base.laptop()
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                border-left: 1px solid base.$tertiary-color
+                height: 100%
+                padding: 0 1rem
+
+            a
+                @include base.open-sans-font()
+                @include base.laptop()
+                    &#login-btn-xl
+                        display: block !important
+
+                    button
+                        font-size: 1.2em
+
+                        svg
+                            font-size: 1.5em
+
             button
-                &:first-child
+                &#open-cart-btn
                     svg
                         font-size: 2em
 
@@ -21,83 +149,59 @@ header
                         top: .7rem
                         right: 1.1rem
 
-                &:nth-child(2)
+                &#open-menu-btn
                     border: 1px solid base.$tertiary-color
                     width: 50px
                     height: 50px
+                    @include base.laptop()
+                        display: none
 
                     svg
                         font-size: 1.5em
-
-    menu
-        background-color: base.$secondary-color
-        z-index: 1
-        transition: all .5s ease-in-out
-
-        &.deactivated
-            transform: translateY(-100vh)
-            opacity: 0
-            visibility: hidden
-
-        &.activated
-            transform: none
-            opacity: 1
-            visibility: visible
-
-        .options
-            height: 5rem
-
-            a
-                @include base.open-sans-font()
-
-                button
-                    font-size: 1.2em
-
-                svg
-                    font-size: 1.5em
-
-            button
-                &:nth-child(2)
-                    background-color: base.$tertiary-color
-                    color: base.$primary-color
-                    width: 50px
-                    height: 50px
-                    font-size: 1.4em
-
-        .main-nav
-            a
-                color: base.$tertiary-color
-                @include base.open-sans-font()
-                font-size: 1.5em
-                letter-spacing: 2px
-
-                &.active
-                    font-weight: bold
 
 .cart-container
     background-color: base.$secondary-color
     z-index: 1
     transition: all .5s ease-in-out
+    @include base.laptop()
+        background-color: base.$tertiary-color-b
+        display: flex
+        justify-content: flex-end
 
     &.deactivated
         transform: translateY(-100vh)
         opacity: 0
         visibility: hidden
+        @include base.laptop()
+            transform: none
 
     &.activated
         transform: none
-        opacity: 1
         visibility: visible
+        opacity: 1
 
-    .cart-header
-        border-bottom: 1.5px solid base.$tertiary-color
+    .cart-container-overlay
+        @include base.laptop()
+            width: 40%
+            height: 100%
+            background-color: base.$secondary-color
+            transition: transform .7s ease-in
 
-        p
-            color: base.$tertiary-color
-            font-size: 1.5em
-            @include base.archivo-black-font()
+            &.deactivated
+                transform: translateX(100%)
 
-    .cart-products
-        .empty-cart
+            &.activated
+                transform: none
+
+        .cart-header
+            border-bottom: 1.5px solid base.$tertiary-color
+
             p
-                font-size: 1.3em
+                color: base.$tertiary-color
+                font-size: 1.5em
+                @include base.archivo-black-font()
+
+        .cart-products
+            .empty-cart
+                p
+                    font-size: 1.3em
