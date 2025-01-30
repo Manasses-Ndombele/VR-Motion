@@ -3,7 +3,7 @@ import '../styles/components/main-product.sass'
 
 export default function MainProduct(props) {
     return (
-        <main id={props.productId} className="p-3 mb-4">
+        <main id={props.productId} className="p-3 mb-4 main-product">
             <div className="product-img-container">
                 <img src={props.img} alt="Produto da loja" className="w-100" />
             </div>

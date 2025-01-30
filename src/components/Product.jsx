@@ -25,7 +25,7 @@ export default function Product(props) {
     }, [])
 
     return (
-        <a href={`/product/${props.id}`} className="product-card text-decoration-none position-relative invisible">
+        <a href={`/produto/${props.id}`} className="product-card text-decoration-none position-relative invisible">
             <p className={`${!props.bestSeller ? 'd-none' : ''} position-absolute best-seller px-3 py-2 mb-0`}>Mais vendido</p>
             <img src={props.img} alt="Produto da loja" className="w-100" />
             <div className="description-area p-3">
