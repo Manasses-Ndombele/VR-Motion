@@ -1,5 +1,5 @@
-import { FaFacebook, FaYoutube } from "react-icons/fa";
-import { FaInstagram, FaPinterest, FaTiktok } from "react-icons/fa6";
+import { FaFacebook, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaPinterest, FaTiktok } from 'react-icons/fa6'
 import '../styles/components/footer.sass'
 
 export default function Footer() {
@@ -55,7 +55,7 @@ export default function Footer() {
                 </a>
             </nav>
             <div className="copyright-container text-center p-3">
-                <p>&copy; 2025 - Desenvolvido por Manassés Ndombele - Dev Fullstack</p>
+                <a href="https://manassesndombele.vercel.app" target="_blank" rel="external">&copy; 2025 - Desenvolvido por Manassés Ndombele - Dev Fullstack</a>
             </div>
         </footer>
     )

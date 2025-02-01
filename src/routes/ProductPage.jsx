@@ -12,7 +12,7 @@ export default function ProductPage() {
         <>
             <PromotionMini />
             <Header activeLink={null} />
-            <MainProduct productId={12} img="/HTC Vive.webp" name="HTC Vive" price="AOA 180.000,00" maxStock="20" />
+            <MainProduct productId={12} img="/HTC Vive.jpg" name="HTC Vive" price="AOA 180.000,00" maxStock="20" />
             <Footer />
         </>
     )

@@ -40,7 +40,7 @@ export default function AdsContainer() {
                     <p className="text-center invisible">25% de desconto em todo o site usando o cupom NEXTVR25</p>
                 </div>
                 <div className="ads-image">
-                    <img src="/anounce.webp" alt="Imagem de anúncio na Loja" className="w-100" />
+                    <img src="/anounce.jpg" alt="Imagem de anúncio na Loja" className="w-100" />
                 </div>
             </div>
             <div className="coupon-description mb-5 text-center py-4">
